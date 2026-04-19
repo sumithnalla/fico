@@ -92,13 +92,13 @@
                 <!-- Right: Contact & DEMO CTA (Desktop) -->
                 <div class="hidden md:flex items-center gap-6">
                     <a href="tel:+917337376600"
-                        class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-primary-600/30 transition-transform transform hover:-translate-y-0.5 flex items-center gap-2">
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg shadow-primary-600/30 transition-transform transform hover:-translate-y-0.5 flex items-center gap-2">
                         <i class="fa-solid fa-phone"></i> 7337376600
                     </a>
-                    <a href="https://wa.me/917337376600" target="_blank"
-                        class="bg-green-500 hover:bg-green-600 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-green-500/30 transition-transform transform hover:-translate-y-0.5 flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
-                    </a>
+                    <button @click="showModal = true"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg shadow-primary-600/30 transition-transform transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar"></i> Book Demo
+                    </button>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -178,6 +178,45 @@
             <p class="text-xs text-center text-slate-800 mt-5 flex items-center justify-center gap-1.5 font-semibold">
                 <i class="fa-regular fa-clock"></i> We'll call you within 10 minutes
             </p>
+        </div>
+    </section>
+
+    <!-- 2.5 MOBILE BOOKING FORM -->
+    <section class="lg:hidden bg-slate-50 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white/40 backdrop-blur-xl border border-white/80 p-7 rounded-[2rem] shadow-2xl">
+                <div class="flex justify-center mb-3">
+                    <span
+                        class="bg-white/90 text-primary-700 text-[11px] font-bold px-4 py-1.5 rounded-full shadow-sm uppercase tracking-wider">Limited
+                        Seats</span>
+                </div>
+                <h3 class="text-2xl font-extrabold text-center text-dark mb-1">Book Your Free Demo</h3>
+                <p class="text-sm text-center text-slate-800 font-medium mb-6">60-min live session. No spam.</p>
+
+                <form onsubmit="event.preventDefault(); alert('Demo Booked Successfully!'); this.reset();"
+                    class="space-y-4">
+                    <div>
+                        <input type="text" placeholder="Your Name" required
+                            class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
+                    </div>
+                    <div>
+                        <input type="tel" placeholder="Mobile (WhatsApp)" required
+                            class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email Address" required
+                            class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3.5 rounded-xl shadow-[0_4px_15px_rgba(2,132,199,0.3)] transition-colors text-base flex justify-center items-center gap-2 mt-2">
+                        Book Free Demo &rarr;
+                    </button>
+                </form>
+
+                <p class="text-xs text-center text-slate-800 mt-5 flex items-center justify-center gap-1.5 font-semibold">
+                    <i class="fa-regular fa-clock"></i> We'll call you within 10 minutes
+                </p>
+            </div>
         </div>
     </section>
 
@@ -461,10 +500,10 @@
                             class="bg-white text-primary-600 hover:bg-slate-50 px-8 py-3 rounded-xl font-bold text-lg shadow-xl shadow-dark/10 transition-transform transform hover:-translate-y-1 flex items-center gap-2">
                             <i class="fa-solid fa-phone"></i> Call Now
                         </a>
-                        <a href="https://wa.me/917337376600" target="_blank"
-                            class="bg-green-500 text-white hover:bg-green-600 px-8 py-3 rounded-xl font-bold text-lg shadow-xl shadow-dark/10 transition-transform transform hover:-translate-y-1 flex items-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Us
-                        </a>
+                        <button @click="showModal = true"
+                            class="bg-primary-600 text-white hover:bg-primary-700 px-8 py-3 rounded-xl font-bold text-lg shadow-xl shadow-dark/10 transition-transform transform hover:-translate-y-1 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar"></i> Book Free Demo
+                        </button>
                     </div>
                 </div>
             </div>
@@ -643,13 +682,13 @@
     <div
         class="md:hidden fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 p-3 shadow-[0_-10px_20px_rgba(0,0,0,0.05)] z-50 flex gap-3">
         <a href="tel:+917337376600"
-            class="flex-1 bg-primary-600 text-white flex justify-center items-center py-3 rounded-lg font-semibold shadow-md gap-2">
+            class="flex-1 bg-white text-primary-600 hover:bg-slate-50 flex justify-center items-center py-3 rounded-lg font-semibold shadow-md gap-2 border border-primary-200">
             <i class="fa-solid fa-phone"></i> Call Now
         </a>
-        <a href="https://wa.me/917337376600" target="_blank"
-            class="flex-1 bg-green-500 text-white flex justify-center items-center py-3 rounded-lg font-semibold shadow-md gap-2">
-            <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Us
-        </a>
+        <button @click="showModal = true"
+            class="flex-1 bg-primary-600 text-white hover:bg-slate-50 flex justify-center items-center py-3 rounded-lg font-semibold shadow-md gap-2 border border-primary-200">
+            <i class="fa-solid fa-calendar"></i> Book Demo
+        </button>
     </div>
 
     <!-- MODAL FORM (Triggered globally) -->
@@ -709,7 +748,7 @@
                             <div class="pt-2">
                                 <button type="submit"
                                     class="w-full bg-primary-600 hover:bg-primary-700 text-white py-3.5 rounded-lg font-semibold shadow-lg shadow-primary-600/20 transition-all flex justify-center items-center gap-2">
-                                    Confirm Booking <i class="fa-solid fa-check"></i>
+                                    Book Free Demo <i class="fa-solid fa-check"></i>
                                 </button>
                             </div>
                         </form>
