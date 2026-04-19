@@ -520,7 +520,76 @@
         </div>
     </section>
 
-    <!-- 5. PROGRAM OVERVIEW -->
+    <!-- 5. WHY GLOBAL COACH -->
+    <section class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left: Auto-rotating image box -->
+                <div class="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-card"
+                    x-data="{ activeSlide: 0, slides: ['phot01.jpeg', 'photo2.jpeg', 'photo3.jpeg', 'photo4.jpeg'] }"
+                    x-init="setInterval(() => activeSlide = (activeSlide + 1) % slides.length, 3000)">
+
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <img :src="slide" alt="Global Coach Facility"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+                            :class="activeSlide === index ? 'opacity-100 relative z-10' : 'opacity-0 absolute z-0'">
+                    </template>
+
+                    <!-- Overlay text -->
+                    <div class="absolute bottom-0 inset-x-0 p-8 bg-gradient-to-t from-dark/80 to-transparent z-20">
+                        <h4 class="text-white font-display font-bold text-2xl">Modern Learning Infrastructure</h4>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-dark mb-6">Why Choose Global Coach?</h2>
+
+                    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                        <div
+                            class="bg-white border-2 border-slate-100 p-5 hover:border-primary-500 transition-colors shadow-sm">
+                            <img src="gra1.jpg" alt="10+ Years of Excellence" class="w-full h-32 object-contain mb-4">
+                            <h4 class="font-bold text-dark text-lg mb-2 leading-tight">10+ Years of Excellence</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">A highly reputed institute with a track
+                                record of consistently producing top consultants.</p>
+                        </div>
+
+                        <div
+                            class="bg-white border-2 border-slate-100 p-5 hover:border-primary-500 transition-colors shadow-sm">
+                            <img src="gra2.jpg" alt="5000+ Students Trained" class="w-full h-32 object-contain mb-4">
+                            <h4 class="font-bold text-dark text-lg mb-2 leading-tight">5000+ Students Trained</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Join a massive alumni network spread
+                                across top MNCs globally.</p>
+                        </div>
+
+                        <div
+                            class="bg-white border-2 border-slate-100 p-5 hover:border-primary-500 transition-colors shadow-sm">
+                            <img src="gra3.jpg" alt="Certified Trainers" class="w-full h-32 object-contain mb-4">
+                            <h4 class="font-bold text-dark text-lg mb-2 leading-tight">Certified Trainers</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Learn from real-time practitioners and SAP
+                                certified professionals with 15+ years experience.</p>
+                        </div>
+
+                        <div
+                            class="bg-white border-2 border-slate-100 p-5 hover:border-primary-500 transition-colors shadow-sm">
+                            <img src="gra4.jpg" alt="Free repeat classes" class="w-full h-32 object-contain mb-4">
+                            <h4 class="font-bold text-dark text-lg mb-2 leading-tight">Free Repeat Classes</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">Attend additional batches or revise core
+                                topics to solidify your knowledge at no extra cost.</p>
+                        </div>
+                    </div>
+
+                    <a href="sap.pdf" download
+                        class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-2 transition ml-4">
+                        <i class="fa-solid fa-file-pdf text-xl"></i> Click here to download SAP detailed syllabus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PROGRAM OVERVIEW -->
     <section class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -618,75 +687,6 @@
                             class="text-primary-400 font-semibold text-sm hover:text-white transition">Download Syllabus
                             <i class="fa-solid fa-arrow-right ml-1"></i></button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. WHY GLOBAL COACH -->
-    <section class="py-12 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-                <!-- Left: Auto-rotating image box -->
-                <div class="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-card"
-                    x-data="{ activeSlide: 0, slides: ['phot01.jpeg', 'photo2.jpeg', 'photo3.jpeg', 'photo4.jpeg'] }"
-                    x-init="setInterval(() => activeSlide = (activeSlide + 1) % slides.length, 3000)">
-
-                    <template x-for="(slide, index) in slides" :key="index">
-                        <img :src="slide" alt="Global Coach Facility"
-                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-                            :class="activeSlide === index ? 'opacity-100 relative z-10' : 'opacity-0 absolute z-0'">
-                    </template>
-
-                    <!-- Overlay text -->
-                    <div class="absolute bottom-0 inset-x-0 p-8 bg-gradient-to-t from-dark/80 to-transparent z-20">
-                        <h4 class="text-white font-display font-bold text-2xl">Modern Learning Infrastructure</h4>
-                    </div>
-                </div>
-
-                <!-- Right: Content -->
-                <div>
-                    <h2 class="font-display text-3xl md:text-4xl font-bold text-dark mb-6">Why Choose Global Coach?</h2>
-
-                    <div class="grid sm:grid-cols-2 gap-4 mb-8">
-                        <div
-                            class="bg-white border-2 border-slate-100 p-5 hover:border-primary-500 transition-colors shadow-sm">
-                            <img src="gra1.jpg" alt="10+ Years of Excellence" class="w-full h-32 object-contain mb-4">
-                            <h4 class="font-bold text-dark text-lg mb-2 leading-tight">10+ Years of Excellence</h4>
-                            <p class="text-slate-600 text-sm leading-relaxed">A highly reputed institute with a track
-                                record of consistently producing top consultants.</p>
-                        </div>
-
-                        <div
-                            class="bg-white border-2 border-slate-100 p-5 hover:border-primary-500 transition-colors shadow-sm">
-                            <img src="gra2.jpg" alt="5000+ Students Trained" class="w-full h-32 object-contain mb-4">
-                            <h4 class="font-bold text-dark text-lg mb-2 leading-tight">5000+ Students Trained</h4>
-                            <p class="text-slate-600 text-sm leading-relaxed">Join a massive alumni network spread
-                                across top MNCs globally.</p>
-                        </div>
-
-                        <div
-                            class="bg-white border-2 border-slate-100 p-5 hover:border-primary-500 transition-colors shadow-sm">
-                            <img src="gra3.jpg" alt="Certified Trainers" class="w-full h-32 object-contain mb-4">
-                            <h4 class="font-bold text-dark text-lg mb-2 leading-tight">Certified Trainers</h4>
-                            <p class="text-slate-600 text-sm leading-relaxed">Learn from real-time practitioners and SAP
-                                certified professionals with 15+ years experience.</p>
-                        </div>
-
-                        <div
-                            class="bg-white border-2 border-slate-100 p-5 hover:border-primary-500 transition-colors shadow-sm">
-                            <img src="gra4.jpg" alt="Free repeat classes" class="w-full h-32 object-contain mb-4">
-                            <h4 class="font-bold text-dark text-lg mb-2 leading-tight">Free Repeat Classes</h4>
-                            <p class="text-slate-600 text-sm leading-relaxed">Attend additional batches or revise core
-                                topics to solidify your knowledge at no extra cost.</p>
-                        </div>
-                    </div>
-
-                    <a href="sap.pdf" download
-                        class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-2 transition ml-4">
-                        <i class="fa-solid fa-file-pdf text-xl"></i> Click here to download SAP detailed syllabus
-                    </a>
                 </div>
             </div>
         </div>
