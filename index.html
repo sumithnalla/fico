@@ -372,18 +372,19 @@
             <h3 class="text-2xl font-extrabold text-center text-dark mb-1">Book Your Free Demo</h3>
             <p class="text-sm text-center text-slate-800 font-medium mb-6">60-min live session. No spam.</p>
 
-            <form onsubmit="event.preventDefault(); alert('Demo Booked Successfully!'); this.reset();"
-                class="space-y-4">
+            <form class="contact-form space-y-4"
+                action="https://script.google.com/macros/s/AKfycbzBl_a4ratMgU-fQrBxxTf7xIbSgmCbWPEHWXtZEdMGJe_2g0X3lQ9q55k2BKnaYGQ/exec"
+                method="POST">
                 <div>
-                    <input type="text" placeholder="Your Name" required
+                    <input type="text" name="Name" placeholder="Your Name" required
                         class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
                 </div>
                 <div>
-                    <input type="tel" placeholder="Mobile (WhatsApp)" required
+                    <input type="tel" name="Mobile" placeholder="Mobile (WhatsApp)" required
                         class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
                 </div>
                 <div>
-                    <input type="email" placeholder="Email Address" required
+                    <input type="email" name="Email" placeholder="Email Address" required
                         class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
                 </div>
                 <button type="submit"
@@ -410,18 +411,19 @@
                 <h3 class="text-2xl font-extrabold text-center text-dark mb-1">Book Your Free Demo</h3>
                 <p class="text-sm text-center text-slate-800 font-medium mb-6">60-min live session. No spam.</p>
 
-                <form onsubmit="event.preventDefault(); alert('Demo Booked Successfully!'); this.reset();"
-                    class="space-y-4">
+                <form class="contact-form space-y-4"
+                    action="https://script.google.com/macros/s/AKfycbzBl_a4ratMgU-fQrBxxTf7xIbSgmCbWPEHWXtZEdMGJe_2g0X3lQ9q55k2BKnaYGQ/exec"
+                    method="POST">
                     <div>
-                        <input type="text" placeholder="Your Name" required
+                        <input type="text" name="Name" placeholder="Your Name" required
                             class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
                     </div>
                     <div>
-                        <input type="tel" placeholder="Mobile (WhatsApp)" required
+                        <input type="tel" name="Mobile" placeholder="Mobile (WhatsApp)" required
                             class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
                     </div>
                     <div>
-                        <input type="email" placeholder="Email Address" required
+                        <input type="email" name="Email" placeholder="Email Address" required
                             class="w-full px-4 py-3.5 bg-white/95 border border-white rounded-xl focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-[15px] text-slate-800 placeholder:text-slate-500 shadow-sm transition-colors">
                     </div>
                     <button type="submit"
@@ -942,24 +944,25 @@
                                 your convenience.</p>
                         </div>
 
-                        <form onsubmit="event.preventDefault(); alert('Demo Booked Successfully!'); this.reset();"
-                            class="space-y-4">
+                        <form class="contact-form space-y-4"
+                            action="https://script.google.com/macros/s/AKfycbzBl_a4ratMgU-fQrBxxTf7xIbSgmCbWPEHWXtZEdMGJe_2g0X3lQ9q55k2BKnaYGQ/exec"
+                            method="POST">
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-1">Name</label>
-                                <input type="text" required
+                                <input type="text" name="Name" required
                                     class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                                     placeholder="Your Name">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-1">Mobile or
                                     WhatsApp</label>
-                                <input type="tel" required
+                                <input type="tel" name="Mobile" required
                                     class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                                     placeholder="+91">
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-1">Email</label>
-                                <input type="email" required
+                                <input type="email" name="Email" required
                                     class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                                     placeholder="name@email.com">
                             </div>
@@ -975,6 +978,38 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const CONTACT_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbzBl_a4ratMgU-fQrBxxTf7xIbSgmCbWPEHWXtZEdMGJe_2g0X3lQ9q55k2BKnaYGQ/exec";
+
+        document.querySelectorAll(".contact-form").forEach((form) => {
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonContent = submitButton.innerHTML;
+
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+                try {
+                    await fetch(CONTACT_FORM_ENDPOINT, {
+                        method: "POST",
+                        mode: "no-cors",
+                        body: new URLSearchParams(new FormData(form))
+                    });
+
+                    alert("Demo Booked Successfully!");
+                    form.reset();
+                } catch (error) {
+                    alert("Sorry, we could not submit your details. Please call us at 7337376600.");
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonContent;
+                }
+            });
+        });
+    </script>
 
 </body>
 
